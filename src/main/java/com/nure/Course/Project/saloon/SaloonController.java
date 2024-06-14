@@ -54,7 +54,7 @@ public class SaloonController {
         boolean deleted = saloonService.deleteSaloonById(id);
         if (deleted)
             return new ResponseEntity<>("Saloon was deleted successfully", HttpStatus.OK);
-        return new ResponseEntity<>("Saloon with that Id was not found",HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Saloon with that Id was not found!",HttpStatus.NOT_FOUND);
     }
 
     @PutMapping("/saloons/{id}")
