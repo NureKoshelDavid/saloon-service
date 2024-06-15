@@ -53,7 +53,7 @@ public class SaloonController {
     public ResponseEntity<String> deleteSaloonById(@PathVariable Long id){
         boolean deleted = saloonService.deleteSaloonById(id);
         if (deleted)
-            return new ResponseEntity<>("Saloon was deleted successfully", HttpStatus.OK);
+            return new ResponseEntity<>("Saloon was deleted successfully!", HttpStatus.OK);
         return new ResponseEntity<>("Saloon with that Id was not found!",HttpStatus.NOT_FOUND);
     }
 
